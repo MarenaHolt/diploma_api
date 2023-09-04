@@ -2,6 +2,7 @@ package in.reqres;
 
 import in.reqres.models.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static in.reqres.specs.LoginSpec.*;
@@ -15,6 +16,7 @@ public class UsersTests {
     CreateUserModel createUserModel = new CreateUserModel();
 
     @Test
+    @Tag("api")
     @DisplayName("Successful login auth")
     void successfulLoginTest() {
         authData.setEmail("eve.holt@reqres.in");
@@ -35,6 +37,7 @@ public class UsersTests {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Error with missing password")
     void missingPasswordTest() {
         authData.setEmail(getFakeEmail());
@@ -55,6 +58,7 @@ public class UsersTests {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Get list delayed users")
     void delayedResponseTest() {
         DelayedResponseModel delayedResponseModel =
@@ -73,6 +77,7 @@ public class UsersTests {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Create user with name and job")
     void createUserTest() {
         String name = getFakeName();
@@ -96,6 +101,7 @@ public class UsersTests {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Get user with id")
     void getSingleUserTest() {
         int clientId = getFakeUserId();
@@ -116,6 +122,7 @@ public class UsersTests {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Delete user with id")
     void deleteUser() {
         int clientId = getFakeUserId();
