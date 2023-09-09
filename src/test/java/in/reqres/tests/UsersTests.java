@@ -1,5 +1,6 @@
-package in.reqres;
+package in.reqres.tests;
 
+import in.reqres.data.TestData;
 import in.reqres.models.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -14,13 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class UsersTests {
     LoginBodyLombokModel authData = new LoginBodyLombokModel();
     CreateUserModel createUserModel = new CreateUserModel();
+    TestData testData = new TestData();
 
     @Test
     @Tag("api")
     @DisplayName("Successful login auth")
     void successfulLoginTest() {
-        authData.setEmail("eve.holt@reqres.in");
-        authData.setPassword("cityslicka");
+        authData.setEmail(testData.getDefaultSuccessEmail());
+        authData.setPassword(testData.getDefaultSuccessPassword());
 
         LoginResponseLombokModel loginResponse = step("Make request", () ->
                 given(loginRequestSpec)
@@ -32,7 +34,7 @@ public class UsersTests {
                         .extract().as(LoginResponseLombokModel.class));
 
         step("Check response", () -> {
-            assertEquals("QpwL5tke4Pnpja7X4", loginResponse.getToken());
+            assertEquals(testData.getDefaultSuccessToken(), loginResponse.getToken());
         });
     }
 
@@ -71,7 +73,7 @@ public class UsersTests {
                                 .extract().as(DelayedResponseModel.class));
 
         step("Check response", () -> {
-            assertEquals("george.bluth@reqres.in", delayedResponseModel.getUsers().get(0).getEmail());
+            assertEquals(testData.getDefaultSuccessEmail(), delayedResponseModel.getUsers().get(3).getEmail());
             assertEquals(6, delayedResponseModel.getUsers().size());
         });
     }
