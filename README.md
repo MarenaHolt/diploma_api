@@ -128,11 +128,6 @@ clean api_test
   <img src="media/screens/allure_to_launches.jpg" alt="allure-testops" width="1000">
 </p>
 
-<sub>Возможность запуска теста из Allure TestOps</sub>
-<p align="center">
-  <img src="media/screens/allure_to_tc.jpg" alt="allure-testops" width="1000">
-</p>
-
 <a id="jira"></a>
 ## <img src="media/logo/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-866)
 
