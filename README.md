@@ -99,7 +99,7 @@ clean api_test
 </p>
 
 <a id="allure"></a>
-## <img src="media/logo/Allure.svg" width="25" height="25"/></a> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/mar-api/6/allure/)
+## <img src="media/logo/Allure.svg" width="25" height="25"/></a> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/mar-api/allure/)
 
 Одним из результатов сборки является **Allure Report**, в котором помимо просмотра итогового отчета на странице теста можно ознакомиться с пошаговым выполнением кода
 
