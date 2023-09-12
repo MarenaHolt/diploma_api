@@ -40,7 +40,7 @@
 <p align="left">
 <a href="https://www.java.com/"><img src="media/logo/Java.svg" width="50" height="50" alt="Java" title="Java"/></a>
 <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA" title="IntelliJ IDEA"/></a>
-<a href="https://github.com/"><img src="media/logo/GitHub.svg" width="50" height="50" alt="Github" title="GitHub"/></a>
+<a href="https://github.com/"><img src="media/logo/Github.svg" width="50" height="50" alt="Github" title="GitHub"/></a>
 <a href="https://junit.org/junit5/"><img src="media/logo/JUnit5.svg" width="50" height="50" alt="JUnit 5" title="JUnit 5"/></a>
 <a href="https://gradle.org/"><img src="media/logo/Gradle.svg" width="50" height="50" alt="Gradle" title="Gradle"/></a>
 <a href="https://github.com/allure-framework/allure2"><img src="media/logo/Allure.svg" width="50" height="50" alt="Allure" title="Allure"/></a>
