@@ -31,7 +31,7 @@ public class AuthApiTest {
                         .when()
                         .post("/login")
                         .then()
-                        .spec(loginResponseSpec)
+                        .spec(loginResponseWithStatusCode200Spec)
                         .extract().as(LoginResponseLombokModel.class));
 
         step("Check response", () -> {
@@ -52,7 +52,7 @@ public class AuthApiTest {
                                 .when()
                                 .post("/login")
                                 .then()
-                                .spec(missingPassword400Spec)
+                                .spec(missingPasswordWithStatusCode400Spec)
                                 .extract().as(MissingPasswordLombokModel.class));
 
         step("Check response", () -> {

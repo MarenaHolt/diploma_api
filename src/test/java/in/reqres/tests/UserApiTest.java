@@ -29,7 +29,7 @@ public class UserApiTest {
                                 .when()
                                 .get("/users?delay=3")
                                 .then()
-                                .spec(delayedResponseSpec)
+                                .spec(delayedResponseWithStatusCode200Spec)
                                 .extract().as(DelayedResponseModel.class));
 
         step("Check response", () -> {
@@ -53,7 +53,7 @@ public class UserApiTest {
                                 .when()
                                 .post("/users")
                                 .then()
-                                .spec(createUserResponseSpec)
+                                .spec(createUserResponseWithStatusCode201Spec)
                                 .extract().as(CreateUserResponseModel.class));
 
         step("Check response", () -> {
@@ -75,7 +75,7 @@ public class UserApiTest {
                                 //.get("/users/2")
                                 .get("/users/" + clientId)
                                 .then()
-                                .spec(getUserResponseSpec)
+                                .spec(getUserResponseWithStatusCode200Spec)
                                 .extract().as(SingleUserResponseModel.class));
 
         step("Check response", () -> {

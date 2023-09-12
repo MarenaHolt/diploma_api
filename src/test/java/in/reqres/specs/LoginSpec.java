@@ -21,7 +21,7 @@ public class LoginSpec {
             .baseUri("https://reqres.in")
             .basePath("/api");
 
-    public static ResponseSpecification loginResponseSpec =
+    public static ResponseSpecification loginResponseWithStatusCode200Spec =
             new ResponseSpecBuilder()
                     .log(STATUS)
                     .log(BODY)
@@ -29,7 +29,7 @@ public class LoginSpec {
                     .expectBody(matchesJsonSchemaInClasspath("schemas/success-login-response-schema.json"))
                     .build();
 
-    public static ResponseSpecification missingPassword400Spec =
+    public static ResponseSpecification missingPasswordWithStatusCode400Spec =
             new ResponseSpecBuilder()
                     .log(STATUS)
                     .log(BODY)
@@ -37,7 +37,7 @@ public class LoginSpec {
                     .expectBody(matchesJsonSchemaInClasspath("schemas/missing-password-response-schema.json"))
                     .build();
 
-    public static ResponseSpecification delayedResponseSpec =
+    public static ResponseSpecification delayedResponseWithStatusCode200Spec =
             new ResponseSpecBuilder()
                     .log(STATUS)
                     .log(BODY)
@@ -45,7 +45,7 @@ public class LoginSpec {
                     .expectBody(matchesJsonSchemaInClasspath("schemas/list-users-schema.json"))
                     .build();
 
-    public static ResponseSpecification createUserResponseSpec =
+    public static ResponseSpecification createUserResponseWithStatusCode201Spec =
             new ResponseSpecBuilder()
                     .log(STATUS)
                     .log(BODY)
@@ -53,7 +53,7 @@ public class LoginSpec {
                     .expectBody(matchesJsonSchemaInClasspath("schemas/create-user-response-schema.json"))
                     .build();
 
-    public static ResponseSpecification getUserResponseSpec =
+    public static ResponseSpecification getUserResponseWithStatusCode200Spec =
             new ResponseSpecBuilder()
                     .log(STATUS)
                     .log(BODY)
